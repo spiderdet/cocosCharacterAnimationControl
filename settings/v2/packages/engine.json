@@ -12,7 +12,7 @@
         "_value": true
       },
       "gfx-webgl2": {
-        "_value": true
+        "_value": false
       },
       "animation": {
         "_value": true
@@ -135,7 +135,6 @@
       "custom-pipeline",
       "geometry-renderer",
       "gfx-webgl",
-      "gfx-webgl2",
       "light-probe",
       "marionette",
       "particle",

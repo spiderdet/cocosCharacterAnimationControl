@@ -1,0 +1,31 @@
+{
+    "dataUrl": "build.data",
+    "frameworkUrl": "fakeFramework.js",
+    "loaderUrl": "fakeLoader.js",
+    "codeUrl": "build.wasm",
+    "symbolsUrl": "",
+    "streamingAssetsUrl": "",
+    "companyName": "Example Company",
+    "productName": "Example Product",
+    "productVersion": "1.0.0",
+    "dependencyJS":[
+        "web-adapter.js",
+        "application.js",
+        "engine-adapter.js",
+        "first-screen.js",
+        "assets/internal/index.js",
+        "assets/main/index.js",
+        "cocos-js/bullet.release.asm-d4a3f7e0.js",
+        "cocos-js/bullet.release.wasm-7e66743c.js",
+        "cocos-js/bullet.release.wasm-e702f478.js",
+        "cocos-js/cc.js",
+        "cocos-js/meshopt_decoder.asm-e6c5b578.js",
+        "cocos-js/meshopt_decoder.wasm-43855155.js",
+        "cocos-js/meshopt_decoder.wasm-ebbcb6df.js",
+        "cocos-js/_virtual_cc-41b43dc6.js",
+        "src/import-map.js",
+        "src/polyfills.bundle.js",
+        "src/system.bundle.js",
+        "src/chunks/bundle.js"
+    ]
+}
