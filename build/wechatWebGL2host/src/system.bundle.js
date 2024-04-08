@@ -4,7 +4,7 @@
   function errMsg(errCode, msg) {
     return (msg || "") + " (SystemJS Error#" + errCode + " " + "https://git.io/JvFET#" + errCode + ")";
   }
-
+  var self = GameGlobal;
   var hasSymbol = typeof Symbol !== 'undefined';
   var hasSelf = typeof self !== 'undefined';
   var hasDocument = typeof document !== 'undefined';

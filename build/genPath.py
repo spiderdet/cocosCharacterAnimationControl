@@ -26,7 +26,7 @@ def write_to_json(JS_paths, NonJS_paths, output_file):
         json.dump(data, f, indent=4)
 
 # 指定文件夹路径
-directory_path = './wechatWebGL1'
+directory_path = './wechatWebGL2host'
 
 # 获取所有文件的相对路径
 JS, NonJS = get_files_relative_path(directory_path)
