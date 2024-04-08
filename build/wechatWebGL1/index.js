@@ -1,3 +1,7 @@
+tj.updateProgressBar(100);
+wx.env = {};
+wx.env.USER_DATA_PATH = wx.USER_DATA_PATH;
+
 function __initApp () {  // init app
 globalThis.__wxRequire = require;  // FIX: require cannot work in separate engine 
 require('./web-adapter');

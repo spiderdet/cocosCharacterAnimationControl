@@ -1,11 +1,19 @@
 {
+    "dataUrl": "build.data",
+    "frameworkUrl": "fakeFramework.js",
+    "loaderUrl": "fakeLoader.js",
+    "codeUrl": "build.wasm",
+    "symbolsUrl": "",
+    "streamingAssetsUrl": "",
+    "companyName": "Example Company",
+    "productName": "Example Product",
+    "productVersion": "1.0.0",
     "dependencyJS": [
         "application.js",
         "engine-adapter.js",
         "fakeFramework.js",
         "fakeLoader.js",
         "first-screen.js",
-        "index.js",
         "web-adapter.js",
         "assets/internal/index.js",
         "assets/main/index.js",
@@ -23,7 +31,6 @@
         "src/chunks/bundle.js"
     ],
     "dependencyData": [
-        "config.json",
         "game.json",
         "logo.png",
         "project.config.json",

@@ -8,7 +8,7 @@ def get_files_relative_path(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.split('.')[-1] == "js":
-                if file == "index.js": continue
+                # if file == "index.js": continue
                 file_path = os.path.relpath(os.path.join(root, file), directory).replace('\\', '/')
                 JS_file_paths.append(file_path)
             else:
@@ -20,13 +20,13 @@ def get_files_relative_path(directory):
 def write_to_json(JS_paths, NonJS_paths, output_file):
     data = {
         "dependencyJS": JS_paths,
-        "dependencyNonJS": NonJS_paths
+        "dependencyData": NonJS_paths
     }
     with open(output_file, 'w') as f:
         json.dump(data, f, indent=4)
 
 # 指定文件夹路径
-directory_path = './wechatgameGL2'
+directory_path = './wechatWebGL1'
 
 # 获取所有文件的相对路径
 JS, NonJS = get_files_relative_path(directory_path)

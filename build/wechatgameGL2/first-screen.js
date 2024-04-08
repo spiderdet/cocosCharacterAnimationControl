@@ -1,60 +1,68 @@
-const VS_LOGO = `
-attribute vec4 a_Position;
-attribute vec2 a_TexCoord;
-varying vec2 v_TexCoord;
+const VS_LOGO = `#version 300 es
+layout(location = 0) in vec4 a_Position;
+layout(location = 1) in vec2 a_TexCoord;
+out vec2 v_TexCoord;
+
 void main() {
     gl_Position = a_Position;  
     v_TexCoord = a_TexCoord;
 }`;
 
-const FS_LOGO = `
+const FS_LOGO = `#version 300 es
 precision mediump float;
+in vec2 v_TexCoord;
 uniform sampler2D u_Sampler;
-varying vec2 v_TexCoord;
+out vec4 outColor;
+
 void main() {
-    gl_FragColor = texture2D(u_Sampler, v_TexCoord);
+    outColor = texture(u_Sampler, v_TexCoord);
 }`;
 
-const VS_BG = `
-attribute vec4 a_Position;
-attribute vec2 a_TexCoord;
-varying vec2 v_TexCoord;
+const VS_BG = `#version 300 es
+layout(location = 0) in vec4 a_Position;
+layout(location = 1) in vec2 a_TexCoord;
+out vec2 v_TexCoord;
+
 void main() {
     gl_Position = a_Position;  
     v_TexCoord = a_TexCoord;
 }`;
 
-const FS_BG = `
+const FS_BG = `#version 300 es
 precision mediump float;
+in vec2 v_TexCoord;
 uniform sampler2D u_Sampler;
 uniform float u_flip;
-varying vec2 v_TexCoord;
+out vec4 outColor;
+
 void main() {
     vec2 texCoord = v_TexCoord;
     if(u_flip > 0.5) {
         texCoord.y = 1.0 - texCoord.y;
     }
-    gl_FragColor = texture2D(u_Sampler, texCoord);
+    outColor = texture(u_Sampler, texCoord);
 }`;
 
-const VS_PROGRESSBAR = `
-precision mediump float;
-attribute vec4 a_Position;
-attribute float a_Progress;
-varying float v_Progress;
+const VS_PROGRESSBAR = `#version 300 es
+layout(location = 0) in vec4 a_Position;
+layout(location = 1) in float a_Progress;
+out float v_Progress;
+
 void main() {
     gl_Position = a_Position;  
     v_Progress = a_Progress;
 }`;
 
-const FS_PROGRESSBAR = `
+const FS_PROGRESSBAR = `#version 300 es
 precision mediump float;
+in float v_Progress;
 uniform float u_CurrentProgress;
-varying float v_Progress;
 uniform vec4 u_ProgressBarColor;
 uniform vec4 u_ProgressBackground;
+out vec4 outColor;
+
 void main() {
-    gl_FragColor = v_Progress <= u_CurrentProgress ? u_ProgressBarColor : u_ProgressBackground;
+    outColor = v_Progress <= u_CurrentProgress ? u_ProgressBarColor : u_ProgressBackground;
 }`;
 
 const options = {

@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  var self = GameGlobal;
+
   function errMsg(errCode, msg) {
     return (msg || "") + " (SystemJS Error#" + errCode + " " + "https://git.io/JvFET#" + errCode + ")";
   }
